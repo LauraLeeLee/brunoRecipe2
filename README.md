@@ -1,5 +1,5 @@
 
-## View project live here [Thats nice Bruno](https://thats-nice-bruno.netlify.com)
+## View project live here [Thats nice Bruno](https://bruno-recipe-2.netlify.com)
 
 ### Description
 This is a project I chose to do for fun and to continue to practice with React.
