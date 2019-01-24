@@ -1,0 +1,287 @@
+:root {
+  --main-color: #FBCD61;
+  --main-font: #406647;
+  --list-section: #fde7b4;
+}
+
+body, footer, header, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background: url(./images/papertexture.jpg) no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100%;
+  /* overflow: hidden; */
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+  /* padding-bottom: 100px; /* height of your footer */
+  /* padding-bottom:60px; */
+  /* justify-items: center; */
+}
+
+.main_header {
+  margin: 50px auto 50px;
+  border-style: double;
+  border-width: 15px;
+  border-color: #264626;
+  background: #f8dfa0;
+  width: 90vw;
+}
+
+.page_title {
+  font: 3em 'Montserrat', sans-serif;
+  font-weight: bold;
+  color: #990000;
+  text-shadow: 2px 1px 0 #000;
+  padding: 15px;
+  margin: 0;
+}
+
+nav {
+  grid-row: 1 / 2;
+}
+
+/* ====nav bar styling===== */
+/* Top level menu bar   */
+nav ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  font: 24px 'Mirza', cursive;
+  font-weight: 400;
+  /* color: black; */
+}
+/* Each list item inside horizontal menu bar */
+nav ul li {
+  width: 33.33%;
+  display: inline-block;
+  /* margin-right: -6px; */
+}
+
+/* Text and links across navbar */
+nav a, nav span {
+  background-color: #006600;
+  color: black;
+  /* box-shadow: 0 25px 25px -20px silver inset; */
+  text-decoration: none;
+  outline: none;
+  display: block;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  padding: 2px 2px 2px 2px;
+}
+
+/* Unvisited/visited links in horizontal bar */
+/* nav a:link {
+  background-color: #006600;
+  color: black;
+} */
+/* Hovering over list item in top menu bar and make sure to code in padding for the anchor and span tags
+to expand the click area for the user */
+/* nav ul li a:hover, nav ul li span:hover  {
+  background-color: #990000;
+  color: white;
+} */
+
+.active-link {
+  background-color: #990000; /*red*/
+  color: white;
+}
+/* Drop-down menu for each item in menu bar */
+nav ul li ul {
+  background-color: #990000;
+  /* box-shadow: 0 40px 40px -20px black inset; */
+  position: absolute;
+  z-index: 11;
+  /*set width to match the main nav tabs, inherit from parent*/
+  width: 25%;
+  right: 37.5%;
+  top: 53px;
+  visibility: hidden;
+}
+/* Make drop-down visible when hovering on menu bar item  */
+nav ul li:hover ul {
+  visibility: visible;
+}
+/* Individual list items in drop-down menus */
+    /*positioning needs fixed -when hover items are displaced to the right, it occurred
+      after moving the entire menu to the right to center it*/
+nav ul li ul li {
+  width: 100%;
+  /*added left-.25 to bump it to the left .25, it works but not sure if this is the
+  correct way to do it*/
+  float: none;
+  left: -.25px;
+  height: 35px;
+  line-height: 44px;
+  border-top: solid 1.25px grey;
+  font-size: 18px;
+}
+/* Links in drop-down menus */
+nav ul li ul li a,
+nav ul li ul li a:link,
+nav ul li ul li a:visited {
+  background: none;
+  display: block;
+  text-align: left;
+  text-indent: 10%;
+  width: 100%;
+  height: 100%;
+  color: white;
+  text-decoration: none;
+  outline: none;
+}
+/* Hover and active states in drop down menu */
+nav ul li ul li a:hover,
+nav ul li ul li a:active {
+  background: white;
+  color: green;
+}
+
+.home-page {
+  grid-row: 2 / 3;
+}
+
+.about_page {
+  display: grid;
+  grid-row: 2 / 3;
+}
+
+.index_section {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "titleimg"
+                        "greeting";
+}
+
+.image-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-area: titleimg;
+}
+
+.titleimage {
+  width: 90vw;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: -120px;
+  border-style: groove;
+  border-width:15px;
+  border-color: #F7C914;
+}
+
+.greeting-section {
+  grid-area: greeting;
+  background-color: #990000;
+  width: 75vw;
+  padding: 0 5px 5px 15px;
+  margin-top: 75px;
+  margin-left: auto;
+  margin-right: auto;
+  /* margin-bottom: 120px; */
+  position: relative;
+  z-index: 3;
+  font-family: Palatino, serif;
+  font-size: 1.20em;
+  box-shadow: 10px 10px 5px #262626;
+}
+
+.greeting {
+  color: black;
+  font-size: 40px;
+  font-family: Palatino, serif;
+  margin-top: 5px;
+  margin-bottom: 0px;
+  padding-top: 30px;
+}
+
+
+/* search styling */
+.search_results {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+  justify-items: center;
+}
+
+input {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 40%;
+  height: 30px;
+  font-style: italic;
+  font-size: 18px;
+  justify-self: center;
+  text-align: center;
+}
+
+.footer {
+  grid-row: 3 / 4;
+  height: 30px;
+  background-color: #006600;
+}
+
+/*===media queries===*/
+/* @media screen and (max-width: 799px) and (min-width: 320px) {
+  nav ul li ul li {
+    font-size: 16px;
+  }
+} */
+
+@media screen and (min-width: 320px) and (max-width: 600px) {
+  nav ul li ul {
+    width: 50%;
+    right: 25%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .page_title  {
+    font-size: 2.5em;
+    padding: 2px;
+  }
+
+  .greeting-section {
+    margin-top: 100px;
+    margin-bottom: 0;
+  }
+
+  nav ul li ul li {
+    font-size: 0.6em;
+  }
+}
+
+
+
+@media print {
+  header, nav, footer {
+    display: none;
+  }
+
+  img {
+    display: none;
+  }
+
+  body {
+    background: none;
+  }
+}

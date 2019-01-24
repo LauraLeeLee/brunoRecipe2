@@ -1,0 +1,79 @@
+.about-header {
+  /*box-sizing property specifies that padding and border
+  are included in the total width and height of the border*/
+    margin-top: 30px;
+    box-sizing: border-box;
+    background-color: #990000;
+    border:double 8px;
+    border-color: #006600;
+    width: 79vw;
+    justify-self: center;
+}
+
+.about_title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3em;
+  color: #006600;
+  text-shadow: 1px .5px #f9dfa6;
+  padding-bottom: 15px;
+  padding-top: 5px;
+}
+
+.about_main {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
+
+.about-me {
+  /* height: 350px; */
+  /* overflow: auto; */
+  width: 75vw;
+  font-family: "optima", sans-serif;
+  font-size: 18px;
+  text-align: justify;
+  background-color: #006600;
+  /*font cream color*/
+  color: rgb(245,242,223);
+  padding: 20px;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  justify-self: center;
+}
+
+.about-me p::first-letter{
+  font: italic 30px script;
+  color: #cc0000;
+  text-shadow: 1px 1px #f5f2df;
+}
+
+img {
+  border: solid 1px;
+}
+
+.bruno {
+  /* grid-column: 1 / 2; */
+  width: 40%;
+  float: left;
+  margin: 25px 20px 2px 0;
+}
+
+.img_left {
+  width: 40%;
+  float: left;
+  margin: 8px 20px 0 0;
+}
+
+.img_right {
+  width: 40%;
+  float: right;
+  margin: 8px 0 0 20px;
+}
+
+
+/*===media queries===*/
+@media screen and (max-width: 800px) {
+  .about_title {
+    font-size: 2.5em;
+  }
+}

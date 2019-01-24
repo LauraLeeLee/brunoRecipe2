@@ -1,0 +1,92 @@
+.recipe_container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+  justify-items: center;
+}
+.recipecard {
+  align-self: center;
+  width: 70%;
+  /* height: 100vh; */
+  margin: 50px auto 50px;
+  /* padding-bottom: 20px; */
+  text-align: center;
+  background: #990000;
+  /* position: relative;
+  top: 70px; */
+}
+
+.recipecard h3 {
+  margin-top: 30px;
+  font-size: 2.5em;
+}
+
+.recipecard h4 {
+  margin-top: 20px;
+}
+
+.recipecard p {
+  font-style: italic;
+  margin: 5px 10px 0 10px;
+}
+
+.recipe_image {
+  width: 55%;
+  border-style: inset;
+  border-width: 10px;
+  border-color: #F7C914;
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+
+.recipe_ul {
+  padding-bottom: 20px;
+  list-style-type: square;
+  text-align: left;
+}
+/* remove underline and style font of recipes link text */
+.recipe_li {
+  font-family: Palatino,serif;
+  font-size: 20px;
+  line-height: 150%;
+  color: #000;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+
+/*print button styling  */
+.print {
+  background: var(--main-font);
+  border-radius: 8px;
+  padding: 10px;
+  position: absolute;
+  left: 15px;
+  top: 60px;
+  color: var(--list-section);
+  font-size: 14px;
+  font-weight:  bold;
+}
+
+
+/*===media queries===*/
+@media (max-width: 800px) {
+  .recipecard {
+    width: 90%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .recipecard h3 {
+    font-size: 1.6em;
+    margin: 30px 10px 0 10px;
+  }
+
+  .recipecard h4:first-of-type {
+    margin-top: 20px;
+  }
+
+  .print {
+    display: none;
+  }
+}

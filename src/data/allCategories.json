@@ -1,0 +1,51 @@
+{
+    "beef": {
+        "name": "Beef",
+        "id": "beef",
+        "src": "beefCategory.jpg",
+        "category": ["beef"],
+        "alt": "beef"
+    },
+    "chicken": {
+        "name": "Chicken",
+        "id": "chicken",
+        "src": "chicken.jpg",
+        "category": ["chicken"],
+        "alt": "chicken"
+    },
+    "seafood": {
+        "name": "Seafood",
+        "id": "seafood",
+        "src": "seafood.jpg",
+        "category": ["seafood"],
+        "alt": "seafood"
+    },
+    "pasta-pizza-sauce": {
+        "name": "Pasta Pizza & Sauce",
+        "id": "pasta-pizza-sauce",
+        "src": "pasta2.jpg",
+        "category": ["pasta", "pizza", "sauce"],
+        "alt": "pasta pizza sauce"
+    },
+    "antipasti": {
+        "name": "Antipasti",
+        "id": "antipasti",
+        "src": "antipasti.jpg",
+        "category": ["antipasti"],
+        "alt": "antipasto"
+    },
+    "salad-soup-sandwich": {
+        "name": "Salad, Soup & Sandwich",
+        "id": "salad-soup-sandwich",
+        "src": "soups.jpg",
+        "category": ["salad", "soup", "sandwich"],
+        "alt": "soup"
+    },
+    "dessert": {
+        "name": "Dessert",
+        "id": "dessert",
+        "src": "dessertCategory.jpg",
+        "category": ["dessert"],
+        "alt": "desserts"
+    }
+}
