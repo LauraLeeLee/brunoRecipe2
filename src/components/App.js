@@ -11,7 +11,6 @@ import Search from './Search.js';
 import allCategories from '../data/allCategories.json';
 import Recipes from '../data/recipes.json';
 
-
 class App extends Component {
   constructor(props) {
     super(props);
