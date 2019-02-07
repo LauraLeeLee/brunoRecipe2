@@ -10,6 +10,8 @@ import Footer from './Footer.js';
 import Search from './Search.js';
 import allCategories from '../data/allCategories.json';
 import Recipes from '../data/recipes.json';
+// import firebase, { FirebaseContext } from './components/Firebase/firebase.js';
+import firebase from './firebase.js';
 
 class App extends Component {
   constructor(props) {

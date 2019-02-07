@@ -1,5 +1,5 @@
-import app from 'firebase/app';
-// import firebase from 'firebase';
+// import app from 'firebase/app';
+import firebase from 'firebase';
 
 let db
 
@@ -12,16 +12,16 @@ let db
     messagingSenderId: "564753140528"
   }
 
-//   firebase.initializeApp(config);
-// export default firebase;
+  firebase.initializeApp(config);
+export default firebase;
 
-  class Firebase {
-  constructor() {
-    app.initializeApp(config);
-  }
-}
-
-export default Firebase;
+//   class Firebase {
+//   constructor() {
+//     app.initializeApp(config);
+//   }
+// }
+//
+// export default Firebase;
 
 
 // import firebase from 'firebase'
