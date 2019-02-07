@@ -1,4 +1,5 @@
 import app from 'firebase/app';
+// import firebase from 'firebase';
 
 let db
 
@@ -10,6 +11,9 @@ let db
     storageBucket: "brunorecipe2-4053d.appspot.com",
     messagingSenderId: "564753140528"
   }
+
+//   firebase.initializeApp(config);
+// export default firebase;
 
   class Firebase {
   constructor() {
