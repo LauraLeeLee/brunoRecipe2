@@ -11,7 +11,7 @@ import Search from './Search.js';
 import allCategories from '../data/allCategories.json';
 import Recipes from '../data/recipes.json';
 // import firebase, { FirebaseContext } from './components/Firebase/firebase.js';
-import firebase from './firebase.js';
+import firebase from './Firebase/firebase.js';
 
 class App extends Component {
   constructor(props) {

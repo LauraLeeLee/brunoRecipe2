@@ -1,8 +1,6 @@
 // import app from 'firebase/app';
 import firebase from 'firebase';
 
-let db
-
   const config = {
     apiKey: "AIzaSyCIu1w5-lHqtr3M9b3VKl7tHyjPHxEVQxs",
     authDomain: "brunorecipe2-4053d.firebaseapp.com",
@@ -13,6 +11,20 @@ let db
   }
 
   firebase.initializeApp(config);
+
+  const db = firebase.database();
+  const dbRef = db.ref('recipes');
+  dbRef.on('value', gotData, errData);
+
+  function gotData(data) {
+    console.log(data.val());
+  }
+
+  function errData(err) {
+    console.log("ERROR!", err);
+  }
+
+
 export default firebase;
 
 //   class Firebase {
