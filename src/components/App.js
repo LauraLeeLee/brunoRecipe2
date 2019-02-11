@@ -35,7 +35,7 @@ class App extends Component {
     });
 
     const db = firebase.database();
-    const dbRef = db.ref('dbRecipes');
+    const dbRef = db.ref();
    // dbRef.on('value', snapshot => {
    //  console.log(snapshot.val());
    //  });
@@ -45,11 +45,11 @@ class App extends Component {
      console.log(data.val());
      const dbRecipes = data.val();
      const keys = Object.keys('dbRecipes');
-     // for(let i = 0; i < keys.length; i++) {
-     //   let k = keys[i];
-     //   let name = dbRecipes[k].name;
-     //   console.log(name);
-     // }
+     for(let i = 0; i < keys.length; i++) {
+       let k = keys[i];
+       let name = dbRecipes[k].name;
+       console.log(name);
+     }
    }
 
    function errData(err) {
