@@ -13,16 +13,28 @@ import firebase from 'firebase';
   firebase.initializeApp(config);
 
   const db = firebase.database();
-  const dbRef = db.ref('recipes');
-  dbRef.on('value', gotData, errData);
+  console.log(db);
 
-  function gotData(data) {
-    console.log(data.val());
-  }
+  const dbRef = db.ref();
 
-  function errData(err) {
-    console.log("ERROR!", err);
-  }
+ dbRef.on('value', snapshot => {
+  console.log(snapshot.val());
+  });
+
+
+
+
+
+
+  // dbRef.on('value', gotData, errData);
+  //
+  // function gotData(data) {
+  //   console.log(data.val());
+  // }
+  //
+  // function errData(err) {
+  //   console.log("ERROR!", err);
+  // }
 
 
 export default firebase;

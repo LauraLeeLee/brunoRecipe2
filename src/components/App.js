@@ -19,6 +19,7 @@ class App extends Component {
     this.state = {
       view: 'home',
       recipes: [],
+      dbRecipes: [],
       allCategories: {},
       navCat: '',
       navImg: ''
@@ -29,9 +30,38 @@ class App extends Component {
   componentDidMount() {
     this.setState({
       recipes: Recipes,
+      dbRecipes: [],
       allCategories: allCategories
     });
+
+    const db = firebase.database();
+    const dbRef = db.ref('dbRecipes');
+   // dbRef.on('value', snapshot => {
+   //  console.log(snapshot.val());
+   //  });
+   dbRef.on('value', getData, errData);
+
+   function getData(data) {
+     console.log(data.val());
+     const dbRecipes = data.val();
+     const keys = Object.keys('dbRecipes');
+     // for(let i = 0; i < keys.length; i++) {
+     //   let k = keys[i];
+     //   let name = dbRecipes[k].name;
+     //   console.log(name);
+     // }
+   }
+
+   function errData(err) {
+     console.log('ERROR!', err);
+   }
+
   }
+
+
+
+
+
 
   // onNavigate = (navCat) => {
   //   console.log(navCat);
