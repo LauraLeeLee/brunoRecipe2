@@ -30,7 +30,6 @@ class App extends Component {
   componentDidMount() {
     this.setState({
       recipes: Recipes,
-      dbRecipes: [],
       allCategories: allCategories
     });
 
@@ -43,13 +42,18 @@ class App extends Component {
 
    function getData(data) {
      console.log(data.val());
+     // const{ dbRecipes } = this.state;
+
+     // this.setState({ dbRecipes: data.val()})
+
      const dbRecipes = data.val();
+
      const keys = Object.keys('dbRecipes');
      for(let i = 0; i < keys.length; i++) {
        let k = keys[i];
        let name = dbRecipes[k].name;
        console.log(name);
-     }
+      }
    }
 
    function errData(err) {
