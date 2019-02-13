@@ -9,11 +9,11 @@ class RecipeFilter extends Component {
   }
 
  render() {
-   const {recipes, match} = this.props;
+   const {dbRecipes, match} = this.props;
    const currentCat = match.params.categoryId;
    const currentCatArray = currentCat.toLowerCase().split('-');
 
-   const filteredItems = recipes.filter(item =>
+   const filteredItems = dbRecipes.filter(item =>
        item.category.every(cat =>
          currentCatArray.includes(cat))
        );

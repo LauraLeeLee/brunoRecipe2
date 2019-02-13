@@ -9,7 +9,7 @@ import Nav from './Nav.js';
 import Footer from './Footer.js';
 import Search from './Search.js';
 import allCategories from '../data/allCategories.json';
-import Recipes from '../data/recipes.json';
+// import Recipes from '../data/recipes.json';
 // import firebase, { FirebaseContext } from './components/Firebase/firebase.js';
 import firebase from './Firebase/firebase.js';
 
@@ -18,7 +18,6 @@ class App extends Component {
     super(props);
     this.state = {
       view: 'home',
-      recipes: [],
       dbRecipes: [],
       allCategories: {},
       navCat: '',
@@ -29,7 +28,6 @@ class App extends Component {
 
   componentDidMount() {
     this.setState({
-      recipes: Recipes,
       allCategories: allCategories
     });
 
@@ -44,7 +42,7 @@ class App extends Component {
   }
 
   render() {
-    const { view, recipes, allCategories, navCat, dbRecipes } = this.state;
+    const { view, allCategories, navCat, dbRecipes } = this.state;
     console.log({view});
     console.log({navCat});
     console.log({dbRecipes});
@@ -59,16 +57,13 @@ class App extends Component {
             <Route exact path="/" component={HomePage}/>
             <Route path="/About Me" component={AboutMe}/>
             <Route path="/Search" render={props => <Search {...props}
-                                                       recipes={recipes}
                                                        dbRecipes={dbRecipes}
                                                        />} />
             <Route path="/:category/:recipeId"
                   render={props => <Recipe {...props}
-                                    recipes={recipes}
                                     dbRecipes={dbRecipes}/>}
             />
             <Route path="/:categoryId" render={props => <Category {...props}
-                                                       recipes={recipes}
                                                        dbRecipes={dbRecipes}
                                                        allCategories={allCategories} />} />
 

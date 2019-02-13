@@ -5,7 +5,7 @@ import SearchResult from './SearchResult.js';
 
 class Search extends Component {
     static propTypes = {
-      recipes: PropTypes.array.isRequired
+      dbRecipes: PropTypes.array.isRequired
     }
 
     constructor(props) {
@@ -17,11 +17,11 @@ class Search extends Component {
    }
 
    searchRecipes = (event) => {
-     const {recipes} = this.props;
+     const {dbRecipes} = this.props;
 
      const query = event.target.value.toLowerCase();
     //
-     const filteredRecipes = recipes.filter(recipe => {
+     const filteredRecipes = dbRecipes.filter(recipe => {
         return (recipe.name.toLowerCase().search(query) > -1 ||
          recipe.ingredients.filter(ingredient => {
           return ingredient.toLowerCase().search(query) > -1;
@@ -38,8 +38,8 @@ class Search extends Component {
 
     render() {
       const { filteredList, noResults } = this.state;
-      const { recipes, match } = this.props;
-      console.log({recipes});
+      const { dbRecipes, match } = this.props;
+      console.log({dbRecipes});
       console.log({filteredList});
 
       return(
@@ -52,7 +52,7 @@ class Search extends Component {
             />
           </Debounce>
 
-          <SearchResult recipes={recipes}
+          <SearchResult recipes={dbRecipes}
                         match={match}
                         filteredList={filteredList}/>
 
