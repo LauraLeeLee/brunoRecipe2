@@ -23,7 +23,6 @@ class App extends Component {
       navCat: '',
       navImg: ''
     }
-    // this.onNavigate = this.onNavigate.bind(this);
   }
 
   componentDidMount() {

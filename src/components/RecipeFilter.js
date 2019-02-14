@@ -5,7 +5,7 @@ import RecipeList from './RecipeList.js';
 
 class RecipeFilter extends Component {
   static propTypes = {
-    recipes: PropTypes.array.isRequired
+    dbRecipes: PropTypes.array.isRequired
   }
 
  render() {

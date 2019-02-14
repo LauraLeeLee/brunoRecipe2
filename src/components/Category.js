@@ -12,8 +12,8 @@ function Category (props) {
        <MenuInfo  allCategories={allCategories}
                     match={match}/>
        <RecipeFilter match={match}
-                   dbRecipes={dbRecipes}
-                   allCategories={allCategories}/>
+                     dbRecipes={dbRecipes}
+                     allCategories={allCategories}/>
      </section>
    </React.Fragment>
   );
